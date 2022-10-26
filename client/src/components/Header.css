@@ -1,0 +1,50 @@
+header {
+  height: 55px;
+  box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 14%),
+    0px 1px 10px 0px rgb(0 0 0 / 12%),
+    0px 2px 4px -1px rgb(0 0 0 / 20%);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: "Product Sans", Arial, sans-serif;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.459);
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  margin: 0px;
+}
+
+header>input {
+  height: 35px;
+  width: 50%;
+  max-width: 300px;
+  margin: 10px;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px;
+  border-radius: 10px;
+  padding: 0px 15px;
+  font-size: large;
+  background-color: rgb(231, 229, 233);
+  margin-left: auto;
+}
+
+.hamburger>svg {
+  transform: scale(1.5);
+  margin-left: 10px;
+}
+.hamburger>svg:hover {
+  transform: scale(1.5);
+  margin-left: 10px;
+  background-color: none;
+  border-radius: 50%;
+  background-color: rgba(114, 119, 122, 0.342);
+  box-shadow: 0px 0px 5px 5px rgba(114, 119, 122, 0.342);
+}

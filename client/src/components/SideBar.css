@@ -1,0 +1,39 @@
+#side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  transform: translate(-1000px);
+  z-index: 1;
+  box-shadow: 4px 0px 5px rgba(114, 119, 122, 0.342);
+  clip-path: polygon(0% 0%, 120% 0%, 120% 100%, 0% 100%);
+  width: 300px;
+  height: calc(100vh - 55px);
+  background-color: white;
+  transition: transform 0.5s;
+}
+
+.side-items {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 0px 10px 10px 0px;
+  margin: 5px 0px;
+}
+
+.side-items:hover {
+  background-color: rgba(114, 119, 122, 0.342);
+}
+
+.active {
+  background-color: rgb(117, 216, 247) !important;
+}
+
+@media screen and (max-width:400px) {
+  #side-bar {
+    width: 100vw;
+  }
+}

@@ -1,0 +1,29 @@
+#toDoForm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#toDoForm>form {
+  max-width: 600px;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+}
+
+#createToDo {
+  resize: none;
+  height: 100px;
+  width: 100%;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  box-shadow: 0px 1px 3px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: large;
+}
+
+#createToDo:focus-visible {
+  box-shadow: 0px 0.5px 5px 0.2px;
+}
