@@ -6,7 +6,7 @@ import ToDos from './components/ToDos';
 
 function App() {
   document.addEventListener('click', (e) => {
-    if (e.target.parentElement !== document.querySelector('.hamburger') && e.target !== document.querySelector('#side-bar')) {
+    if ((e.target.parentElement !== document.querySelector('.hamburger') && e.target.parentElement.parentElement !== document.querySelector('.hamburger')) && e.target !== document.querySelector('#side-bar')) {
       const ele = document.getElementById('side-bar');
       ele.style.transform = ele.style.transform === `translate(0px)` ?
         `translate(${-1 * ele.offsetWidth}px)` : null;

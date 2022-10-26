@@ -17,9 +17,10 @@ export default function ToDoForm() {
             setNewToDo(e.target.value);
           }}
           onBlur={(e) => {
-            e.preventDefault();
-            dispatch(addNewToDo(newToDo));
-            setNewToDo('');
+            if (newToDo) {
+              dispatch(addNewToDo(newToDo));
+              setNewToDo('');
+            }
           }}
         />
       </form>

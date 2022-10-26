@@ -1,12 +1,16 @@
 import './Header.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import ToDoIcon from '../images/ToDoIcon.png';
 import { Hamburger } from './Icons';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
+import ToDo from './ToDo';
 
-const search = (arr, str) => {
 
-}
+let num = 0;
 export default function Header() {
+  const todoItems = useSelector(state => state.todo);
+  const [searchText, setSearchText] = useState('');
   return (
     <>
       <header>
@@ -20,10 +24,24 @@ export default function Header() {
         </div>
         <img src={ToDoIcon} alt="To-Do" />
         <h2>To-Do</h2>
-        <input type="text" placeholder='Search'
-          onChange={(e) => {
-            search(e.target.value);
-          }} />
+        <div className="searchBox">
+          <input type="text" placeholder='Search' value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value)
+            }}
+          />
+          <div className="searched-items">
+            {
+              searchText.length != 0 ?
+                todoItems.filter((item) => {
+                  if (item.content.search(searchText) !== -1) {
+                    return true
+                  }
+                }).map((item) => <ToDo item={item} />)
+                : null
+            }
+          </div>
+        </div>
       </header>
     </>
   );
